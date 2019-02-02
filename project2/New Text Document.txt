@@ -1,0 +1,60 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.text.*;
+
+class Cal extends JFrame
+{
+
+Container c;
+JLabel lblWeight,lblHeight, lblAnswer;
+JButton btnSubmit;
+JTextField txtWeight,txtFeet,txtInch;
+JPanel p1,p2,p3,p4;
+Bmi()
+{
+c=getContentPane();
+c.setLayout(new BoxLayout(c,BoxLayout.Y_AXIS));
+
+
+p1= new JPanel(new FlowLayout(FlowLayout.LEFT));
+lblWeight = new JLabel("Enter Weight In Kgs");
+txtWeight=new JTextField(6);
+p1.add(lblWeight);
+p1.add(txtWeight);
+c.add(p1);
+
+
+p2= new JPanel(new FlowLayout(FlowLayout.LEFT));
+lblHeight = new JLabel("Enter Height In Feet And Inches");
+txtFeet=new JTextField(2);
+txtInch=new JTextField(4);
+p2.add(lblHeight);
+p2.add(txtFeet);
+p2.add(txtInch);
+c.add(p2);
+
+p3= new JPanel();
+btnSubmit = new JButton("Submit");
+p3.add(btnSubmit);
+c.add(p3);
+
+p4= new JPanel(new FlowLayout(FlowLayout.LEFT));
+lblAnswer = new JLabel("");
+p4.add(lblAnswer);
+c.add(p4);
+ 
+btnSubmit.addActionListener(new ActionListener()
+}
+
+public static void main(String args[])
+	{
+	Bmi c = new Bmi();
+	c.setSize(300,150);
+	c.setTitle("Bmi Calculator");
+	c.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	c.setLocationRelativeTo(null);
+	c.setVisible(true);
+	}
+
+}
